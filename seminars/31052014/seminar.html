@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Carousel Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]>
+    <script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script>
+        function initialize() {
+            var map_canvas = document.getElementById('map_canvas');
+            var myLatlng = new google.maps.LatLng(53.862857, 27.596937);
+            var map_options = {
+                scrollwheel: false,
+                center: myLatlng,
+                zoom: 15,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                title: "Место проведения тренинга !"
+            });
+            var map = new google.maps.Map(map_canvas, map_options)
+
+            marker.setMap(map);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+</head>
+<body>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <img class="carousel-image" style="height: auto; width: auto;" src="images/blue.jpg"/>
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Тренинг Ольги Кийко</h1>
+
+                    <h3>Самостоятельное формирование гардероба.</h3>
+
+                    <p>Тренинг по стилю для девушек от стилиста-имиджмейкера международного уровня, работающего в
+                        Беларуси и России.</p>
+
+                    <p><a class="btn btn-lg btn-primary" href="#signOn" role="button">Записаться на тренинг</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img class="carousel-image" style="height: auto; width: auto;" src="images/pink.jpg"/>
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Тренинг Ольги Кийко</h1>
+
+                    <p>Обладатель титула "Приз зрительских симпатий" конкурса стилистов "Beauty Battle", участник
+                        международного фестиваля красоты "Невские берега" (г. Санкт-Петербург). Соавтор и ведущая
+                        семинара "Имидж соблазнителя".</p>
+
+                    <p><a class="btn btn-lg btn-primary" href="#signOn" role="button">Записаться на тренинг</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img class="carousel-image" style="height: auto; width: auto;" src="images/black.jpg"/>
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Тренинг Ольги Кийко</h1>
+
+                    <p>Занимается формированием имиджа и стиля более 5 лет, за время которых число клиентов стало
+                        исчисляться сотнями.</p>
+
+                    <p><a class="btn btn-lg btn-primary" href="#signOn" role="button">Записаться на тренинг</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span
+            class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next"><span
+            class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+<h1 class="text-center"><strong>31 мая 2014 года</strong></h1>
+<h3 class="text-center"><strong>Состоится тренинг по стилю для девушек</strong></h3>
+<h1 class="text-center"><strong>Самостоятельное формирование гардероба.</strong></h1>
+<h3 class="text-center"><strong>Программа тренинга:</strong></h3>
+<br/>
+<br/>
+
+<div class="container marketing">
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+        <div class="col-lg-3">
+            <h4>1. Первое впечатление.</h4>
+
+            <p>Как заставить его работать на вас. Что влияет на восприятие человека.</p>
+        </div>
+        <div class="col-lg-3">
+            <h4>2. Алгоритм действий ”Как правильно формировать гардероб”.</h4>
+
+            <p>Как добиваться поставленных целей с помощью одежды (повышение самооценки, продвижение по карьерной
+                лестниц, повышение внимания со стороны мужчин).</p>
+        </div>
+        <div class="col-lg-3">
+            <h4>3. Оценка внешнего вида.</h4>
+
+            <p>Какие ассоциации вы вызываете. Оценка имиджмейкера, индивидуальные советы по улучшению внешнего вида.</p>
+        </div>
+        <div class="col-lg-3">
+            <h4>4. Образы для конкретных случаев.</h4>
+
+            <p>На свидание, на работу, в кафе/ресторан, для летнего отдыха, для флирта в тенденциях 2014 года.</p>
+        </div>
+
+        <div class="col-lg-3">
+            <h4>5. Как скорректировать недостатки фигуры и подчеркнуть достоинства.</h4>
+        </div>
+        <div class="col-lg-3">
+            <h4>6. Применение цветотипов на практике. Сочетание цветов.</h4>
+        </div>
+        <div class="col-lg-3">
+            <h4>7. Подбор прически.</h4>
+        </div>
+        <div class="col-lg-3">
+            <h4>8. Основы макияжа.</h4>
+        </div>
+        <div class="col-lg-3">
+            <h4>9. Типичные ошибки в подборе гардероба.</h4>
+        </div>
+
+        <!--
+                <div class="col-lg-4">
+                    <img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">
+                    <h2>Heading</h2>
+                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>&lt;!&ndash; /.col-lg-4 &ndash;&gt;
+        -->
+    </div>
+
+    <hr class="featurette-divider">
+    <h1 class="text-center"><strong>Cтоимость тренинга</strong></h1>
+
+    <div class="row">
+        <div class="col-lg-4">
+            <h4><strong>до 15 мая</strong></h4>
+
+            <h2><strong>490 000 бел. руб.</strong></h2>
+        </div>
+        <div class="col-lg-4">
+            <div class="hero-unit text-center">
+                <br/>
+
+                <p><a class="btn btn-primary btn-large btn-danger" href="#signOn">Записывайся сейчас, количество мест ограничено!</a></p>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <h4><strong>после 15 мая</strong></h4>
+
+            <h2><strong>590 000 бел. руб.</strong></h2>
+        </div>
+    </div>
+
+
+    <hr class="featurette-divider">
+
+    <h1 class="text-center"><strong>Что даст вам участие в тренинге:</strong></h1>
+    <br/>
+    <div class="row">
+        <div class="col-lg-4">
+            <h4>1. Сможете самостоятельно формировать свой гардероб.</h4>
+        </div>
+        <div class="col-lg-4">
+            <h4>2. Избавитесь от проблемы ненужных покупок и «нечего надеть».</h4>
+        </div>
+        <div class="col-lg-4">
+            <h4>3. Узнаете в чем быть соблазнительной.</h4>
+        </div>
+        <div class="col-lg-4">
+            <h4>4. Узнаете как сделать деловой стиль интересным.</h4>
+        </div>
+        <div class="col-lg-4">
+            <h4>5. Узнаете какие ассоциации вызывает ваш образ, получите советы по улучшению внешнего вида.</h4>
+        </div>
+        <div class="col-lg-4">
+            <h4>6. Готовые образы на разные случаи: на свидание, на работу, в ресторан, для летнего отдыха, для флирта в тенденциях 2014 года.</h4>
+        </div>
+    </div>
+
+    <h1 class="text-center"><strong>А самое главное:</strong></h1>
+    <h1 class="text-center">Повысите уверенность в себе.</h1>
+    <h1 class="text-center">Станете более привлекательной для мужчин.</h1>
+
+    <hr class="featurette-divider">
+
+
+
+    <div class="row" id="signOn">
+        <h2 class="text-center"><strong>Звоните и бронируйте места</strong></h2>
+        <h3 class="text-center"><strong>+375 29 63 63 603, +375 29 258 54 17</strong></h3>
+        <h3 class="text-center"><a href="mailto:ok6363603@gmail.com">email: ok6363603@gmail.com</a></h3>
+        <h3 class="text-center"><a href="skype:olga_kiyko">skype:olga_kiyko</a><h3 class="text-center">
+        <h3 class="text-center"><a href="http://www.imake.by">www.imake.by</a><h3 class="text-center">
+        <h3 class="text-center"><a href="http://vk.com/imake8">группа vk.com</a><h3 class="text-center">
+
+        <h2 class="text-center"><strong>Место проведения тренинга</strong></h2>
+
+        <div id="map_canvas" class="col-lg-10"></div>
+        <br/>
+
+
+
+    </div>
+
+
+    <!-- START THE FEATURETTES -->
+    <hr class="featurette-divider">
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">First featurette heading. <span
+                    class="text-muted">It'll blow your mind.</span></h2>
+
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis
+                euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus,
+                tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive" src="images/one.jpg">
+        </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="row featurette">
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive" src="images/two.jpg">
+        </div>
+        <div class="col-md-7">
+            <h2 class="featurette-heading">Oh yeah, it's that good. <span
+                    class="text-muted">See for yourself.</span></h2>
+
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis
+                euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus,
+                tellus ac cursus commodo.</p>
+        </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis
+                euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus,
+                tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive" src="images/three.jpg">
+        </div>
+    </div>
+    <hr class="featurette-divider">
+    <!-- /END THE FEATURETTES -->
+
+    <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+
+        <p>&copy; 2014 Кийко Ольга</p>
+        <span class="font-size-mini">
+        телефоны:+375 29 63 63 603, +375 29 258 54 17
+        <a href="mailto:ok6363603@gmail.com">email: ok6363603@gmail.com</a>
+        <a href="skype:olga_kiyko">skype:olga_kiyko</a>
+        <a href="http://www.imake.by">www.imake.by</a>
+        <a href="http://vk.com/imake8">группа vk.com</a>
+        </span>
+    </footer>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/docs.min.js"></script>
+</body>
+</html>
